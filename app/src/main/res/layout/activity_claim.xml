@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.ClaimActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="免责声明"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="使用i山大APP即表明您已阅读、理解并同意以下内容，并遵循所有相关的法律法规。如果您对以下声明有任何异议或者不愿遵循以下声明，请立即停止使用本产品。\n1.对本平台的使用不得违背法律法规及公众道德。\n2.开发团队力争保持本平台所有信息的及时性和准确性，但是由于数据来源的局限性，平台中所载信息有极小几率已经失效。所以本开发团队不对平台所载信息（包括但不限于图片、校园卡数据、各种链接等）的及时性和准确性做出保证。若要获得最准确的信息，请直接与相关责任部门取得联系。\n3.本平台如需系统维护或升级而暂停服务，将会事先公告。若因线路及非本平台控制范围外的硬件故障或其他不可抗力而导致暂停服务，于暂停服务期间造成的一切不便与损失，本平台不负任何责任。\n4.未经许可，不得擅自对本应用进行反编译、修改及二次发布，所造成的一切后果将由违规者承担。\n5.本平台之声明以及其修改权、更新权及最终解释权均属山东大学学生在线所有。"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学生在线©版权所有"
+                android:layout_margin="16dp"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="local_user" />
+
+    <version value="4" />
+
+    <list>
+        <mapping class="cn.edu.sdu.online.isdu.bean.User" />
+    </list>
+</litepal>

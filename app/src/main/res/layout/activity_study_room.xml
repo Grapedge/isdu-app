@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorThemeGrey"
+    tools:context=".ui.activity.StudyRoomActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="自习室"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_zhongxin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_0"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_zhongxin"
+                    app:radioImageButtonText="中心校区"/>
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_honglou"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_honglou"
+                    app:radioImageButtonText="洪家楼校区"/>
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_baotuq"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_2"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_baotuquan"
+                    app:radioImageButtonText="趵突泉校区"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_ruanjian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_3"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_ruanjian"
+                    app:radioImageButtonText="软件园校区"/>
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_xinglong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_xinglong"
+                    app:radioImageButtonText="兴隆山校区"/>
+                <cn.edu.sdu.online.isdu.ui.design.button.RadioImageButton
+                    android:id="@+id/radio_qianfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="radio_5"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:radioImageButtonSrc="@drawable/line_qianfoshan"
+                    app:radioImageButtonText="千佛山校区"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/select_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第 "
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimaryText"/>
+
+                    <TextView
+                        android:id="@+id/select_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPurpleDark"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 周 星期 "
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimaryText"/>
+
+                    <TextView
+                        android:id="@+id/select_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="四"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPurpleDark"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="12dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

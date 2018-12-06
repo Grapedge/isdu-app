@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/book_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="12dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <!--横线-->
+    <View
+        android:id="@+id/separate_line"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="24dp"
+        android:background="#dcdcdc"/>
+
+    <!--借阅书籍的详情-->
+    <LinearLayout
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--图标-->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:background="@color/colorPurpleDark"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"/>
+
+                    <!--图书信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--书名-->
+                <TextView
+                    android:id="@+id/book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="《滚滚长江东逝水》"/>
+
+                <!--图书编号和借阅地点-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/id_number"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="24dp"
+                        android:text="ID Number123123"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_location"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="4dp"/>
+                    <TextView
+                        android:id="@+id/book_place"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:text="软件园馆借书处"/>
+                </LinearLayout>
+
+                <!--借阅时间-->
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="借阅日期："/>
+                    <TextView
+                        android:id="@+id/borrow_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="2018-04-10"/>
+                </LinearLayout>
+
+                <!--应还时间-->
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="应还日期："/>
+                    <TextView
+
+                        android:id="@+id/back_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="2015-06-09"/>
+                </LinearLayout>
+
+                <!--剩余天数和续借次数-->
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_time"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="4dp"/>
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPurpleDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余天数："/>
+                    <TextView
+                        android:id="@+id/remain_days"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPurpleDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="47"/>
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPurpleDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="续借次数："/>
+                    <TextView
+                        android:id="@+id/borrow_times"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPurpleDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                </LinearLayout>
+
+                <!--续借按钮-->
+                <TextView
+                    android:id="@+id/renew"
+                    android:clickable="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/purple_stroke_rect_colorchanged"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPurpleDark"
+                    android:text="续借"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/design_image_button_background"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:id="@+id/linear_layout">
+
+    <!--图标-->
+    <ImageView
+        android:id="@+id/design_imgbtn_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--文字-->
+    <TextView
+        android:id="@+id/design_imgbtn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

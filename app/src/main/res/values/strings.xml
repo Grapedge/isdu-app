@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">i山大</string>
+
+
+    <dimen name="smallest_text_size">12sp</dimen>
+    <string name="add_widget">Add widget</string>
+
+</resources>

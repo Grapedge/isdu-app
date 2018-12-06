@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dcdcdc"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/option_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/design_image_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="男"
+        android:textColor="@color/colorPrimaryText"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+</LinearLayout>

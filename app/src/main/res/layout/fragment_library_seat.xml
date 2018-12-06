@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorThemeGrey"
+    tools:context="cn.edu.sdu.online.isdu.ui.fragments.LibrarySeatFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_zhongxin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_0"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_wenli"
+            app:radioImageButtonText="中心文理分馆"/>
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_jiangzhen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_1"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_jiangzhen"
+            app:radioImageButtonText="蒋震分馆"/>
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_honglou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_2"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_honglou"
+            app:radioImageButtonText="洪家楼分馆"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_baotuq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_3"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_baotuquan"
+            app:radioImageButtonText="趵突泉分馆"/>
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_gongxue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_4"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_qianfoshan"
+            app:radioImageButtonText="工学分馆"/>
+        <cn.edu.sdu.online.isdu.ui.design.button.LibraryRadioImageButton
+            android:id="@+id/radio_xinglong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="radio_5"
+            android:clickable="true"
+            android:focusable="true"
+            app:radioImageButtonSrc="@drawable/line_xinglong"
+            app:radioImageButtonText="兴隆山分馆"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="12dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

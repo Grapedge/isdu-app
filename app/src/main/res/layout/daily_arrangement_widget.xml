@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0ffffff"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="今日安排"
+        android:textColor="@color/colorPurpleDark"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:background="@color/colorWhite"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="今日无安排 :P"
+        android:textSize="20sp"
+        android:visibility="visible"
+        android:textColor="@color/colorPurpleDark"
+        android:gravity="center"/>
+
+</LinearLayout>

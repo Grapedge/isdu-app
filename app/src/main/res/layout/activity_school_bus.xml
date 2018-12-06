@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorThemeGrey"
+    tools:context=".ui.activity.SchoolBusActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="校车"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--主体-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--提示文本框-->
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="">
+            </TextView>
+
+            <!--校区选择按钮-->
+            <LinearLayout
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorWhite">
+                <!--六宫格Row1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/colorWhite">
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_zhongxin"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_zhongxin"
+                        app:imageButtonText="中心校区"/>
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_hongjialou"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_honglou"
+                        app:imageButtonText="洪家楼校区"/>
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_baotuquan"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_baottu"
+                        app:imageButtonText="趵突泉校区"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp">
+
+                </LinearLayout>
+                <!--六宫格Row2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorWhite">
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_ruanjianyuan"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_ruanjian"
+                        app:imageButtonText="软件园校区"/>
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_xinglongshan"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_xinglong"
+                        app:imageButtonText="兴隆山校区"/>
+
+                    <cn.edu.sdu.online.isdu.ui.design.button.SchoolImageButton
+                        android:id="@+id/btn_qianfoshan"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:imageButtonSrc="@drawable/location_qianfo"
+                        app:imageButtonText="千佛山校区"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--紫色提示文字-->
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:background="@color/colorPurpleFade"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="温馨提示:请依次单击校区图标以选择出发地和目的地\n(查询电话：88395114)\n订车服务电话：88395765或88392365"/>
+            </LinearLayout>
+
+            <!--单选按钮组-->
+            <RadioGroup
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+                <!--工作日按钮-->
+                <RadioButton
+                    android:id="@+id/workday"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@null"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:checked="true"
+                    android:textColor="@drawable/schoolbus_radiobtn"
+                    android:text="工作日"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryText"/>
+                <!--非工作日按钮-->
+                <RadioButton
+                    android:id="@+id/non_workday"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@null"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:textColor="@drawable/schoolbus_radiobtn"
+                    android:text="非工作日"/>
+            </RadioGroup>
+            <!--按钮组-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="64dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/purple_stroke_rect"
+                        android:text="重置" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_search"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="64dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/purple_stroke_rect"
+                        android:text="查询" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

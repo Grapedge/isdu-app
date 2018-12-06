@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F2F2F2</color>
+    <color name="colorPrimaryDark">#a9a9a9</color>
+    <color name="colorAccent">#717DEB</color>
+
+    <!--主题灰-->
+    <color name="colorThemeGrey">#F2F2F2</color>
+    <!--纯白色-->
+    <color name="colorWhite">#FFFFFF</color>
+    <!--深紫色-->
+    <color name="colorPurpleDark">#717DEB</color>
+    <!--浅紫色-->
+    <color name="colorPurpleFade">#A6AAE9</color>
+    <!--提示红-->
+    <color name="colorRed">#e95461</color>
+    <!--一级文本颜色-->
+    <color name="colorPrimaryText">#131313</color>
+    <!--二级文本颜色-->
+    <color name="colorSecondaryText">#808080</color>
+    <!--提示文本颜色-->
+    <color name="colorAdditionalText">#959595</color>
+
+    <color name="colorButtonNormal">#ffffff</color>
+    <color name="colorButtonPressed">#ececec</color>
+
+    <color name="colorSeparateLine">#F2F2F2</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

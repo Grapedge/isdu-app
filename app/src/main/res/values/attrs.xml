@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ImageButton图片SRC-->
+    <attr name="imageButtonSrc" format="reference" />
+    <!--ImageButton文字-->
+    <attr name="imageButtonText" format="string" />
+
+    <attr name="floatCardViewBackground" format="color|reference" />
+    <attr name="floatCardViewRadius" format="dimension" />
+    <attr name="floatCardViewShadowColor" format="color|reference" />
+    <attr name="floatCardViewElevation" format="dimension" />
+
+    <attr name="wideButtonItemName" format="string" />
+    <attr name="wideButtonComment" format="string" />
+    <attr name="wideButtonSrc" format="reference" />
+    <attr name="wideButtonCanSwitch" format="boolean" />
+    <attr name="wideButtonItemId" format="string" />
+    <attr name="wideButtonShowArrow" format="boolean" />
+
+    <attr name="radioImageButtonSrc" format="reference|color" />
+    <attr name="radioImageButtonText" format="string|reference" />
+
+    <attr name="normalTextColor" format="color|reference" />
+    <attr name="pressedTextColor" format="color|reference" />
+
+    <attr name="borderWidth" format="dimension" />
+    <attr name="borderColor" format="color" />
+    <attr name="cornerRadius" format="dimension" />
+    <attr name="halfHeightRadius" format="boolean" />
+    <attr name="backgroundColor" format="color" />
+
+    <declare-styleable name="JzzButton">
+        <attr name="borderWidth" />
+        <attr name="borderColor" />
+        <attr name="cornerRaduis" />
+        <attr name="halfHeightRadius" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle" />
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="WideButton">
+        <attr name="wideButtonItemName" />
+        <attr name="wideButtonComment" />
+        <attr name="wideButtonSrc" />
+        <attr name="wideButtonCanSwitch" />
+        <attr name="wideButtonItemId" />
+        <attr name="wideButtonShowArrow" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageButton">
+        <attr name="imageButtonSrc" />
+        <attr name="imageButtonText" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatCardView">
+        <attr name="floatCardViewBackground" />
+        <attr name="floatCardViewRadius" />
+        <attr name="floatCardViewShadowColor" />
+        <attr name="floatCardViewElevation" />
+    </declare-styleable>
+
+    <declare-styleable name="RadioImageButton">
+        <attr name="radioImageButtonSrc" />
+        <attr name="radioImageButtonText" />
+    </declare-styleable>
+
+    <declare-styleable name="ClickableTextView">
+        <attr name="normalTextColor" />
+        <attr name="pressedTextColor" />
+    </declare-styleable>
+
+    <attr name="cardColor" format="color|reference" />
+    <declare-styleable name="ScheduleBack">
+        <attr name="cardColor" />
+    </declare-styleable>
+
+    <declare-styleable name="ScheduleCard">
+        <attr name="cardText" format="string|reference" />
+        <attr name="currentWeek" format="boolean" />
+        <attr name="cardColor" />
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RichTextEditor" >
+        <attr name="rt_editor_image_height" format="integer" />
+        <attr name="rt_editor_image_bottom" format="integer" />
+        <attr name="rt_editor_text_init_hint" format="string" />
+        <attr name="rt_editor_text_size" format="integer" />
+        <attr name="rt_editor_text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RichTextView" >
+        <attr name="rt_view_image_height" format="integer" />
+        <attr name="rt_view_image_bottom" format="integer" />
+        <attr name="rt_view_text_init_hint" format="string" />
+        <attr name="rt_view_text_size" format="integer" />
+        <attr name="rt_view_text_color" format="color" />
+    </declare-styleable>
+</resources>

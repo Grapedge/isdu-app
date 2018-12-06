@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.edu.sdu.online.isdu">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScheduleActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- UCrop Activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.edu.sdu.online.isdu.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name=".ui.activity.LibraryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SchoolBusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ExamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.StudyRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CloudActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScheduleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreateScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SchoolBusTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ViewImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BindLibraryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DownloadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".util.broadcast.DownloadBroadcastReceiver">
+            <intent-filter>
+                <action android:name="download_open" />
+                <action android:name="download_pause" />
+                <action android:name="download_cancel" />
+                <action android:name="download_start" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activity.CreatePostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreateLostAndFoundPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.StudyRoomTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NotFindPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PostDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LikeMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyLikeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GuideActivity"
+            android:theme="@style/GuidePageTheme" />
+
+        <service
+            android:name=".service.MessageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".ui.widget.ScheduleListService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ClaimActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.TestActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".ui.activity.CourseTableActivity" />
+
+        <receiver android:name=".ui.widget.DailyArrangementWidget"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:label="今日安排">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/daily_arrangement_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>
