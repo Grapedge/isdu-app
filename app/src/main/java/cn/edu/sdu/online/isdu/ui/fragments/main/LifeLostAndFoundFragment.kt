@@ -1,33 +1,24 @@
 package cn.edu.sdu.online.isdu.ui.fragments.main
 
+
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import cn.edu.sdu.online.isdu.R
 import cn.edu.sdu.online.isdu.app.LazyLoadFragment
 import cn.edu.sdu.online.isdu.bean.Life
-import cn.edu.sdu.online.isdu.bean.Post
-import cn.edu.sdu.online.isdu.bean.User
 import cn.edu.sdu.online.isdu.net.pack.ServerInfo
 import cn.edu.sdu.online.isdu.net.NetworkAccess
+import cn.edu.sdu.online.isdu.ui.activity.MainActivity
 import cn.edu.sdu.online.isdu.ui.adapter.LifeItemAdapter
-import cn.edu.sdu.online.isdu.ui.adapter.PostItemAdapter
-import cn.edu.sdu.online.isdu.ui.fragments.search.SearchLifeFragment
-import cn.edu.sdu.online.isdu.ui.fragments.search.SearchNewsFragment
-import cn.edu.sdu.online.isdu.ui.fragments.search.SearchPostFragment
-import cn.edu.sdu.online.isdu.ui.fragments.search.SearchUserFragment
 import cn.edu.sdu.online.isdu.util.FileUtil
 import cn.edu.sdu.online.isdu.util.Logger
 import com.liaoinstan.springview.widget.SpringView
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog
-import com.qmuiteam.qmui.widget.dialog.QMUIDialogBlockBuilder
 import kotlinx.android.synthetic.main.fragment_life_lost_and_found.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -47,7 +38,7 @@ import org.json.JSONObject
  ****************************************************
  */
 
-class LifeLostAndFoundFragment : LazyLoadFragment() {
+class LifeLostAndFoundFragment : LazyLoadFragment(),View.OnClickListener {
 
     private var recyclerView: RecyclerView? = null
     private var imageCard: ImageView? = null
@@ -72,6 +63,13 @@ class LifeLostAndFoundFragment : LazyLoadFragment() {
     private var lastId = 0
     private var needOffset = false
     private var loadComplete = false
+
+    private var textButton: LinearLayout? = null
+    private var textView : TextView? = null
+
+
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_life_lost_and_found, container, false)
@@ -101,6 +99,11 @@ class LifeLostAndFoundFragment : LazyLoadFragment() {
         imageBaotuquan = view.findViewById(R.id.image_baotuquan)
         imageXinglongshan = view.findViewById(R.id.image_xinglnogshan)
 
+
+        textButton = view.findViewById(R.id.text_life_class)
+        textButton!!.setOnClickListener(this)
+
+        textView = view.findViewById(R.id.text_notice_type)
 
 
 
@@ -156,25 +159,53 @@ class LifeLostAndFoundFragment : LazyLoadFragment() {
         })
 
     }
-     fun onClick(v: View?) {
+
+
+    override  fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.image_qianfoshan -> {loadData()//这里还要等后端接口出来吧
-            }
-            R.id.image_hongjialou -> {
+
+            text_life_class.id->{
+                /*这个还没搞好，还要接口*/
+                val mainActivity = activity as MainActivity?
+                val items = arrayOf("寻物", "招领","都行")
+
+                val builder = QMUIDialog.CheckableDialogBuilder(mainActivity)
+                builder.addItems(items) { dialog, which ->
+                    if (which == 0){
+                        textView!!.text = "寻物"
+
+                        dialog.dismiss()
+                    }
+                    if (which == 1) {
+                        textView!!.text = "招领"
+
+                        dialog.dismiss()
+                    }
+                    if (which == 2) {
+                        textView!!.text = ""
+
+                        dialog.dismiss()
+                    }
+                }
+
+                builder.show()
 
             }
-            R.id.spinner -> {
 
-            }
         }
     }
 
 
 
+
+
     override fun isLoadComplete(): Boolean = loadComplete
 
+
     override fun loadData() {
+
         if (loadComplete) return
+
 //        if (User.staticUser == null) User.staticUser = User.load()
 //        if (User.staticUser.studentNumber == null) return
 //        if (!User.isLogin()) return
@@ -216,6 +247,15 @@ class LifeLostAndFoundFragment : LazyLoadFragment() {
                 pullRefreshLayout!!.onFinishFreshAndLoad()
             }
         }
+
+
+
+
+
     }
+
+
+
+
 
 }

@@ -40,6 +40,14 @@ public class ServerInfo {
         return "http://" + ipAddr133 + ":8384/post/isCollect?postId=" + postId + "&userId=" + uid;
     }
 
+    /*等接口*/
+    public static final String likeConfession = "http://" + ipAddr133 + ":8384/post/like/";
+
+
+    public static final String collectConfession= "http://" + ipAddr133 + ":8384/post/collect";
+
+    /*等接口*/
+
     public static String getUrlLogin(String num, String pwd) {
         return url + "/user/signIn?j_username=" + num + "&j_password=" + pwd;
     }
@@ -77,6 +85,8 @@ public class ServerInfo {
 
     public static String postCommentUrl = "http://" + ipAddr133 + ":8384/comment/add";
 
+/*等接口*/
+    public static String confessionCommentUrl = "http://" + ipAddr133 + ":8384/comment/add";
 
     /*这个要不起*/
     public static String lifeCommentUrl = "http://" + ipAddr133 + ":8384/comment/add";
@@ -159,6 +169,10 @@ public class ServerInfo {
         return "http://" + ipAddr133 + ":8384/post/detail?id=" + id;
     }
 
+    public static String getConfession(int id) {
+        return "http://" + ipAddr133 + ":8384/post/detail?id=" + id;
+    }
+/*这两个注释之间的都要改*/
 
 
 
@@ -169,6 +183,9 @@ public class ServerInfo {
 
     /*这个接口*/
     public static final String deleteLife = "http://" + ipAddr133 + ":8384/post/delete";
+
+    public static final String deleteConfession = "http://" + ipAddr133 + ":8384/post/delete";
+    /*上面等接口*/
 
     public static String getLibraryInfoUrl(String id){
         return url + "library/info?id=" + id;
@@ -255,6 +272,10 @@ public class ServerInfo {
     }
 
     public static String setPostTag(int postId, String tag, String userId) {
+        return "http://" + ipAddr133 + ":8384/post/setTag?postId=" + postId + "&tag=" + tag + "&userId=" + userId;
+    }
+    /*jiekou */
+    public static String setConfessionTag(int postId, String tag, String userId) {
         return "http://" + ipAddr133 + ":8384/post/setTag?postId=" + postId + "&tag=" + tag + "&userId=" + userId;
     }
 }

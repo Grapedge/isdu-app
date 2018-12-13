@@ -1,264 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <com.liaoinstan.springview.widget.SpringView
         android:id="@+id/pull_refresh_layout_1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="分类查询"
-                android:gravity="start"
-                android:textSize="24sp" />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="分类查询"
+                        android:gravity="start"
+                        android:textSize="24sp" />
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <ImageView
+                        android:id="@+id/image_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_card"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_credentials"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_credentials"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_book"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_book"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <ImageView
+                        android:id="@+id/image_clothing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_clothing"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_electronics"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_electronics"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_other"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                </LinearLayout>
                 <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-               <ImageView
-                   android:id="@+id/image_card"
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:layout_weight="1"
-                   android:src="@drawable/ic_card"
-                   android:clickable="true"
-                   android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_credentials"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_credentials"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_book"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_book"
-                    android:clickable="true"
-                    android:focusable="true"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e9e9e9"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="校区查询"
+                        android:gravity="start"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <ImageView
+                        android:id="@+id/image_zhongxin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_zhongxin"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_hongjialou"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_hongjialou"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_baotuquan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baotuquan"
+                        android:clickable="true"
+                        android:focusable="true"/>
 
 
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <ImageView
+                        android:id="@+id/image_ruanjianyuan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_ruanjianyuan"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_xinglnogshan"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_xinglongshan"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:id="@+id/image_qianfoshan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_qianfoshan"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                </LinearLayout>
                 <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp">
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-                <ImageView
-                    android:id="@+id/image_clothing"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_clothing"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_electronics"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_electronics"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_other"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_other"
-                    android:clickable="true"
-                    android:focusable="true"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e9e9e9"/>
 
 
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
 
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e9e9e9"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-                <TextView
+
+
+                <LinearLayout
+                    android:id="@+id/text_life_class"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="校区查询"
-                    android:gravity="start"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:padding="4dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="启事类型:"
+                        android:textSize="18sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp">
 
+
+                    <TextView
+                        android:id="@+id/text_notice_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="18sp" />
+
+
+
+                    <ImageView
+                        android:id="@+id/btn_notice_cho"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="notice_type"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_forward" />
+
+
+
+
+
+
+
+
+                </LinearLayout>
                 <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-                <ImageView
-                    android:id="@+id/image_zhongxin"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_zhongxin"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_hongjialou"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_hongjialou"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_baotuquan"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_baotuquan"
-                    android:clickable="true"
-                    android:focusable="true"/>
-
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp">
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-                <ImageView
-                    android:id="@+id/image_ruanjianyuan"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_ruanjianyuan"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_xinglnogshan"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_xinglongshan"
-                    android:clickable="true"
-                    android:focusable="true"/>
-                <ImageView
-                    android:id="@+id/image_qianfoshan"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_qianfoshan"
-                    android:clickable="true"
-                    android:focusable="true"/>
-
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e9e9e9"/>
-
-
-
-
-           
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-
-                <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/spinner"
-                    android:layout_gravity="center">
-                </Spinner>
-
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e9e9e9"/>
 
 
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e9e9e9"/>
 
 
-
-        </LinearLayout>
-        </ScrollView>
 
 
 
@@ -266,12 +302,15 @@
             android:id="@+id/recycler_view_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:clickable="true">
 
         </android.support.v7.widget.RecyclerView>
 
 
+
     </com.liaoinstan.springview.widget.SpringView>
+    </ScrollView>
 
 
 </LinearLayout>

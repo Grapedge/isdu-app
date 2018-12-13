@@ -10,8 +10,8 @@ import android.support.v4.view.ViewPager
 import android.view.*
 import cn.edu.sdu.online.isdu.R
 import cn.edu.sdu.online.isdu.app.LazyLoadFragment
-import cn.edu.sdu.online.isdu.ui.activity.CreatePostActivity
-import cn.edu.sdu.online.isdu.ui.activity.SearchActivity
+import cn.edu.sdu.online.isdu.ui.activity.*
+import com.qmuiteam.qmui.widget.dialog.QMUIDialog
 import kotlinx.android.synthetic.main.fragment_home.*
 import net.lucode.hackware.magicindicator.MagicIndicator
 import net.lucode.hackware.magicindicator.ViewPagerHelper
@@ -42,9 +42,9 @@ class HomeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
     private var magicIndicator: MagicIndicator? = null // Magic Indicator
     private var viewPager: ViewPager? = null // ViewPager
 
-    private val mDataList = listOf("实时", "推荐", "精品") // Indicator 数据
+    private val mDataList = listOf("实时", "推荐", "表白") // Indicator 数据
     private val mFragments = listOf(HomeSyncFragment(),
-            HomeRecommendFragment(), HomeExcellentFragment()) // AppFragment 数组
+            HomeRecommendFragment(), HomeConfessionFragment()) // AppFragment 数组
     private var mViewPagerAdapter: FragAdapter? = null // ViewPager适配器
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -77,7 +77,29 @@ class HomeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
                 startActivity(Intent(activity!!, SearchActivity::class.java))
             }
             ask_bar.id -> {
-                startActivity(Intent(activity!!, CreatePostActivity::class.java))
+                val mainActivity = activity as MainActivity?
+                val items = arrayOf("实时","表白", "寻物与招领","交易")
+                val builder = QMUIDialog.CheckableDialogBuilder(mainActivity)
+                builder.addItems(items) { dialog, which ->
+                    if (which == 0){
+                        val intent = Intent(mainActivity, CreatePostActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                    if (which == 1) {
+                        val intent = Intent(mainActivity, CreateConfessionActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                    if (which == 2) {
+                        val intent = Intent(mainActivity, CreateNoticeActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                }
+
+                builder.show()
+
             }
         }
     }

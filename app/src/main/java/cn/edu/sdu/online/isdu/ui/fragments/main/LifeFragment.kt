@@ -12,8 +12,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import cn.edu.sdu.online.isdu.R
 import cn.edu.sdu.online.isdu.app.LazyLoadFragment
-import cn.edu.sdu.online.isdu.ui.activity.CreateLostAndFoundPostActivity
-import cn.edu.sdu.online.isdu.ui.activity.SearchActivity
+import cn.edu.sdu.online.isdu.ui.activity.*
+import com.qmuiteam.qmui.widget.dialog.QMUIDialog
 import kotlinx.android.synthetic.main.fragment_home.*
 import net.lucode.hackware.magicindicator.MagicIndicator
 import net.lucode.hackware.magicindicator.ViewPagerHelper
@@ -83,7 +83,28 @@ class LifeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
                 startActivity(Intent(activity!!, SearchActivity::class.java))
             }
             ask_bar.id -> {
-                startActivity(Intent(activity!!, CreateLostAndFoundPostActivity::class.java))
+                val mainActivity = activity as MainActivity?
+                val items = arrayOf("实时","表白", "寻物与招领","交易")
+                val builder = QMUIDialog.CheckableDialogBuilder(mainActivity)
+                builder.addItems(items) { dialog, which ->
+                    if (which == 0){
+                        val intent = Intent(mainActivity, CreatePostActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                    if (which == 1) {
+                        val intent = Intent(mainActivity, CreateConfessionActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                    if (which == 2) {
+                        val intent = Intent(mainActivity, CreateNoticeActivity::class.java)
+                        startActivity(intent)
+                        dialog.dismiss()
+                    }
+                }
+
+                builder.show()
             }
         }
     }

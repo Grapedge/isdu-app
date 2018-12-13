@@ -140,7 +140,10 @@
             android:name=".ui.activity.CreatePostActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.CreateLostAndFoundPostActivity"
+            android:name=".ui.activity.CreateNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreateConfessionActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.StudyRoomTableActivity"
@@ -153,6 +156,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.PostDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ConfessionDetailActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.LikeMeActivity"

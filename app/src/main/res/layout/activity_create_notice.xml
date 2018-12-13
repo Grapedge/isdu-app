@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.CreateNoticeActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorWhite">
+
+
+        <ImageView
+            android:id="@+id/btn_back_life"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"/>
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="发布启事"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp"/>
+
+
+
+        <TextView
+            android:id="@+id/btn_done_success"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="发布"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/colorPurpleDark"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="启事类型（必选）:"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:id="@+id/text_notice_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp" />
+
+
+
+            <ImageView
+                android:id="@+id/btn_notice_cho"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="notice_type"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_forward" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="所在校区（必选）:"
+                android:textSize="18sp" />
+            <TextView
+
+                android:id="@+id/text_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/btn_college_cho"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_forward"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="college"
+                android:layout_gravity="center_vertical"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="物品分类（必选）:"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:id="@+id/text_thing_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/btn_thing_cho"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_forward"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="thing_type"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="物品名称:"
+                android:textSize="18sp" />
+
+
+
+            <EditText
+                android:id="@+id/edit_thing_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorWhite"
+                android:hint="请填写名称"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="联系方式："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_owner_contect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorWhite"
+                android:hint="QQ、微信或电话"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="详细描述（重要信息请打码，必填）："
+                android:textSize="18sp" />
+
+
+
+            <cn.edu.sdu.online.isdu.ui.design.xrichtext.RichTextEditor
+                android:id="@+id/rich_edit_dis"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:rt_editor_image_bottom="10"
+                app:rt_editor_text_init_hint="请填写描述"
+                app:rt_editor_text_size="16"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <include layout="@layout/edit_operation_bar" />
+
+
+
+
+
+
+
+</LinearLayout>

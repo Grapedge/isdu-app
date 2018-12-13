@@ -60,7 +60,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private val imgRes = listOf(R.drawable.home_selected,  R.drawable.copy_selected,R.drawable.news_selected,R.drawable.me_selected)
     private val imgBackRes = listOf(R.drawable.home_back,  R.drawable.copy_selected,R.drawable.news_back,R.drawable.me_back)
 
-    private var mDataList = listOf("主页", "资讯", "不知道是啥","个人中心")
+    private var mDataList = listOf("主页", "不知道是啥","资讯", "个人中心")
 
     /////////////////////整体滑动布局/////////////////////////
     private var magicIndicator: MagicIndicator? = null // 指引器

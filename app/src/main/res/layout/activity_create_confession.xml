@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.CreatePostActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="新建"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/btn_done"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="表白"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/colorPurpleDark"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="是否匿名:"
+                    android:textSize="18sp" />
+                <TextView
+
+                    android:id="@+id/text_college"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorWhite"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="18sp" />
+
+                <ImageView
+
+                    android:id="@+id/btn_college_cho"
+
+                    android:layout_width="40dp"
+
+                    android:layout_height="40dp"
+
+                    android:layout_weight="1"
+
+                    android:paddingTop="10dp"
+
+                    android:paddingBottom="10dp"
+
+                    android:src="@drawable/ic_forward"
+
+                    android:clickable="true"
+
+                    android:focusable="true"
+
+                    android:onClick="college"
+
+                    android:layout_gravity="center_vertical"/>
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="标题"
+                android:textColor="@color/colorPrimaryText"
+                android:background="@color/colorWhite"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="20sp"/>
+
+            <View
+                android:id="@+id/separate_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorSeparateLine"/>
+
+            <cn.edu.sdu.online.isdu.ui.design.xrichtext.RichTextEditor
+                android:id="@+id/rich_edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                app:rt_editor_image_bottom="10"
+                app:rt_editor_text_init_hint="内容"
+                app:rt_editor_text_size="16"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/edit_operation_bar" />
+
+</LinearLayout>
