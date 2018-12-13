@@ -113,7 +113,7 @@ class HomeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
             override fun getTitleView(p0: Context?, p1: Int): IPagerTitleView {
                 val simplePagerTitleView = ColorTransitionPagerTitleView(p0!!)
                 simplePagerTitleView.normalColor = 0xFF808080.toInt()
-                simplePagerTitleView.selectedColor = 0xFF131313.toInt()
+                simplePagerTitleView.selectedColor = 0xFFFF9F24.toInt()
 //                simplePagerTitleView.normalColor = 0xFF808080.toInt()
 //                simplePagerTitleView.selectedColor = 0xFFFFFFFF.toInt()
                 simplePagerTitleView.text = mDataList[p1]
@@ -128,7 +128,7 @@ class HomeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
                 val linePagerIndicator = LinePagerIndicator(p0)
                 linePagerIndicator.mode = LinePagerIndicator.MODE_WRAP_CONTENT
                 linePagerIndicator.lineWidth = UIUtil.dip2px(context, 10.0).toFloat()
-                linePagerIndicator.setColors(0xFF717DEB.toInt())
+                linePagerIndicator.setColors(0xFFFF9F24.toInt())
 //                linePagerIndicator.setColors(0xFFFFFFFF.toInt())
                 return linePagerIndicator
             }

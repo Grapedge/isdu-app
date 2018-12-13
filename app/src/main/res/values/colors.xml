@@ -12,6 +12,8 @@
     <color name="colorPurpleDark">#717DEB</color>
     <!--浅紫色-->
     <color name="colorPurpleFade">#A6AAE9</color>
+    <!--视觉橙-->
+    <color name="colorOrange">#ff9f24</color>
     <!--提示红-->
     <color name="colorRed">#e95461</color>
     <!--一级文本颜色-->
@@ -25,6 +27,10 @@
     <color name="colorButtonPressed">#ececec</color>
 
     <color name="colorSeparateLine">#F2F2F2</color>
+    <color name="colorRedNormal">#ff48a8</color>
+    <!--视觉提供的颜色-->
+    <color name="colorRedDark">#fe329d</color>
+    <color name="colorSearchBackground">#f2f0f1</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>
