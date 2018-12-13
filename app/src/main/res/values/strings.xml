@@ -4,5 +4,9 @@
 
     <dimen name="smallest_text_size">12sp</dimen>
     <string name="add_widget">Add widget</string>
+    <string name="test_number">15</string>
+    <string name="test_name">表白昵称</string>
+    <string name="test_date">2018-10-18 20:20</string>
+    <string name="test_content">表白内容巴拉巴拉巴拉巴巴拉巴拉巴拉巴拉巴巴拉巴拉巴拉巴拉巴巴拉巴拉巴拉巴拉巴拉巴......</string>
 
 </resources>

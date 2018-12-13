@@ -409,7 +409,7 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
                 Logger.log(e)
                 runOnUiThread {
                     txtLike!!.text = "点赞 0 次"
-                    confession.likeNumber = 0
+                    confession.likeCount = 0
                     HistoryRecord.newHistory(confession)
                 }
             }
@@ -430,7 +430,7 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
                         txtLike!!.text = "点赞 $des 次"
 //                        btnLike!!.setImageResource(if (isLike) R.drawable.ic_like_yes else R.drawable.ic_like_no)
 
-                        confession.likeNumber = strInt
+                        confession.likeCount = strInt
                         HistoryRecord.newHistory(confession)
                     }
                 } catch (e: Exception) {
@@ -472,12 +472,12 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
                                     val data = RichTextEditor.EditData()
                                     if (obj.getInt("type") == 0) {
                                         data.imageName = obj.getString("content")
-                                        if (data.inputStr != "" && (confession.content == null || confession.content == ""))
-                                            confession.content = "[图片]"
+                                        if (data.inputStr != "" && (confession.postContent == null || confession.postContent == ""))
+                                            confession.postContent = "[图片]"
                                     } else {
                                         data.inputStr = obj.getString("content")
-                                        if (data.inputStr != "" && (confession.content == null || confession.content == ""))
-                                            confession.content = data.inputStr
+                                        if (data.inputStr != "" && (confession.postContent == null || confession.postContent == ""))
+                                            confession.postContent = data.inputStr
                                     }
                                     editDataList.add(data)
                                 }
@@ -534,7 +534,7 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
                                     this.commentList.clear()
 
                                     // 写入历史浏览
-                                    confession.commentsNumbers = commentList.size
+                                    confession.commentCount = commentList.size
                                     HistoryRecord.newHistory(confession)
 
                                     getComments(commentList.size - 1, commentList) // 获取评论

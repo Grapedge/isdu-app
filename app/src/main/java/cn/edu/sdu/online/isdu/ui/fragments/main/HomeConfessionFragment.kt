@@ -3,6 +3,7 @@ package cn.edu.sdu.online.isdu.ui.fragments.main;
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,61 +19,48 @@ import cn.edu.sdu.online.isdu.util.Logger
 import com.liaoinstan.springview.widget.SpringView
 import org.json.JSONArray
 import org.json.JSONObject
+import java.util.*
 
-class HomeConfessionFragment  : LazyLoadFragment() {
+class HomeConfessionFragment : LazyLoadFragment() {
 
-
+    // View
     private var recyclerView: RecyclerView? = null
     private var adapter: ConfessionItemAdapter? = null
-    //    private var updateBar: TextView? = null
     private var pullRefreshLayout: SpringView? = null
     private var dataList: MutableList<Confession> = ArrayList()
-//    private var blankView: TextView? = null
 
     private var lastValue = 0
     private var needOffset = false
     private var loadComplete = false
 
+    // create view
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home_confession, container, false)
         initView(view)
         initRecyclerView()
         initPullRefreshLayout()
-
         return view
     }
 
-    /**
-     * 初始化View
-     */
+    // init view
     private fun initView(view: View) {
         recyclerView = view.findViewById(R.id.recycler_view)
-//        updateBar = view.findViewById(R.id.update_bar)
         pullRefreshLayout = view.findViewById(R.id.pull_refresh_layout)
-//        blankView = view.findViewById(R.id.blank_view)
-
-//        updateBar!!.translationY = -100f
-//        blankView!!.visibility  = View.GONE
     }
 
-    /**
-     * 初始化RecyclerView
-     */
+    // init recycler view
     private fun initRecyclerView() {
-        adapter = ConfessionItemAdapter(activity!!, dataList)
 
+        adapter = ConfessionItemAdapter(activity!!, dataList)
         recyclerView!!.layoutManager = LinearLayoutManager(context)
         recyclerView!!.adapter = adapter
     }
 
-    /**
-     * 初始化下拉刷新
-     */
+    // init refresh layout
     private fun initPullRefreshLayout() {
-        // 下拉刷新监听器
         pullRefreshLayout!!.setListener(object : SpringView.OnFreshListener {
             override fun onLoadmore() {
-                // 上拉加载更多
+                // load more
                 lastValue = if (dataList.isEmpty()) 0 else dataList[dataList.size - 1].confessionId
                 needOffset = true
                 loadComplete = false
@@ -80,7 +68,7 @@ class HomeConfessionFragment  : LazyLoadFragment() {
             }
 
             override fun onRefresh() {
-                // 下拉刷新
+                // refresh
                 lastValue = 0
                 dataList.clear()
                 needOffset = false
@@ -91,10 +79,35 @@ class HomeConfessionFragment  : LazyLoadFragment() {
 
     }
 
+    override fun isLoadComplete(): Boolean = loadComplete
+
+    val nameList = listOf("庄总", "耿大佬", "高老板", "洛七", "七七", "冬冬", "董叔", "齐站")
     override fun loadData() {
+        // test load here
+        for (i in nameList) {
+            val confession = Confession()
+            confession.uid = "2"
+            confession.commentCount = (Math.random() * 300).toInt()
+            confession.confessionId = (Math.random() * 300).toInt()
+            confession.time = Date().time
+            confession.title = "表白$i"
+            confession.likeCount = (Math.random() * 300).toInt()
+            confession.postContent =
+                    if (i != "董叔")
+                        "$i 好${if (Math.random() <= 0.5) "帅" else "可爱"}鸭，不知道有没有${if (Math.random() <= 0.5) "男朋友" else "女朋友"}，我真的真的好喜欢他啊！"
+                    else "董叔都大四了还没有女朋友，替董叔征个婚"
+
+            confession.tag = "confession"
+            dataList.add(confession)
+        }
+        loadComplete = true
+        adapter?.notifyDataSetChanged()
+        if (needOffset) recyclerView?.smoothScrollBy(0, 50)
+        pullRefreshLayout!!.onFinishFreshAndLoad()
+        return
+        /*
         if (loadComplete) return
-        /*这个要改*/
-                NetworkAccess.cache(ServerInfo.getTagedPostTen(lastValue)) { success, cachePath ->
+        NetworkAccess.cache(ServerInfo.getTagedPostTen(lastValue)) { success, cachePath ->
             if (success) {
                 try {
                     val arr = JSONArray(JSONObject(FileUtil.getStringFromFile(cachePath)).getString("obj"))
@@ -102,12 +115,12 @@ class HomeConfessionFragment  : LazyLoadFragment() {
                         val obj = arr.getJSONObject(i)
                         val confession = Confession()
                         confession.uid = obj.getString("uid")
-                        confession.commentsNumbers = obj.getInt("commentNumber")
+                        confession.commentCount = obj.getInt("commentNumber")
                         confession.confessionId = obj.getInt("id")
                         confession.time = obj.getString("time").toLong()
                         confession.title = obj.getString("title")
-                        confession.likeNumber = obj.getInt("likeNumber")
-                        confession.content = obj.getString("info")
+                        confession.likeCount = obj.getInt("likeNumber")
+                        confession.postContent = obj.getString("info")
                         confession.tag = if (obj.has("tag")) obj.getString("tag") else ""
 
                         if (!dataList.contains(confession))
@@ -130,5 +143,6 @@ class HomeConfessionFragment  : LazyLoadFragment() {
                 pullRefreshLayout!!.onFinishFreshAndLoad()
             }
         }
+        */
     }
 }
