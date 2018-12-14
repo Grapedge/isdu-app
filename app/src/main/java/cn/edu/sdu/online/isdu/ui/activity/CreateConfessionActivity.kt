@@ -41,17 +41,11 @@ import java.net.URL
 import java.util.*
 import kotlin.collections.HashMap
 
-/**
- ****************************************************
- * @author zsj
- * Last Modifier: ZSJ
- * Last Modify Time: 2018/7/29
- *
- * 新建帖子页面
- *
- * 新增对GIF动画的判定
- ****************************************************
- */
+/******************************************************
+ * @author Grapes
+ * @date 2018-12-14
+ * @Description 发表表白帖子
+ ******************************************************/
 
 class CreateConfessionActivity : NormActivity(), View.OnClickListener {
 

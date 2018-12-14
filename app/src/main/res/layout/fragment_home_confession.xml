@@ -11,14 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:header="@layout/load_layout"
-        app:footer="@layout/load_layout"
-        android:layout_marginTop="16dp">
+        app:footer="@layout/load_layout">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp">
+            android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
 

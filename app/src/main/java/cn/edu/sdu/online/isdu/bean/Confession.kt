@@ -1,5 +1,7 @@
 package cn.edu.sdu.online.isdu.bean
 
+import android.os.Parcel
+import android.os.Parcelable
 import java.util.Objects
 
 import cn.edu.sdu.online.isdu.interfaces.Collectible
@@ -11,7 +13,7 @@ import cn.edu.sdu.online.isdu.util.history.HistoryRecord
  * @Description 表白帖子信息
  ***********************************************************************/
 
-class Confession : AbstractPost() {
+class Confession() : AbstractPost(), Parcelable {
 
     var confessionId: Int = 0 // tid
     var commentCount: Int = 0   // the number of comments
@@ -45,6 +47,15 @@ class Confession : AbstractPost() {
             this.mTime = time
         }
 
+    constructor(parcel: Parcel) : this() {
+        confessionId = parcel.readInt()
+        commentCount = parcel.readInt()
+        postType = parcel.readInt()
+        likeCount = parcel.readInt()
+        value = parcel.readDouble()
+        tag = parcel.readString()
+    }
+
     // temporarily unavailable
     /*
     constructor(type: Int, content: String) : this() {
@@ -74,5 +85,28 @@ class Confession : AbstractPost() {
 
     override fun onScan() {
         HistoryRecord.newHistory(this)
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(confessionId)
+        parcel.writeInt(commentCount)
+        parcel.writeInt(postType)
+        parcel.writeInt(likeCount)
+        parcel.writeDouble(value)
+        parcel.writeString(tag)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Confession> {
+        override fun createFromParcel(parcel: Parcel): Confession {
+            return Confession(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Confession?> {
+            return arrayOfNulls(size)
+        }
     }
 }

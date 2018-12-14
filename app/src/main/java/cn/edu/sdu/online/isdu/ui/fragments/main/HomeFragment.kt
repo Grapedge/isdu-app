@@ -78,7 +78,7 @@ class HomeFragment : LazyLoadFragment(), Serializable, View.OnClickListener {
             }
             ask_bar.id -> {
                 val mainActivity = activity as MainActivity?
-                val items = arrayOf("实时","表白", "寻物与招领","交易")
+                val items = arrayOf("发帖", "表白", "寻物招领", "交易")
                 val builder = QMUIDialog.CheckableDialogBuilder(mainActivity)
                 builder.addItems(items) { dialog, which ->
                     if (which == 0){

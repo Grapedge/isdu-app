@@ -31,12 +31,12 @@ import org.json.JSONObject
  * @author Grapes
  * @date 2018-12-13
  * @Description 表白信息适配器
- */
+ ***********************************************************/
 class ConfessionItemAdapter (private val activity: Activity, private val dataList: List<Confession>) :
         RecyclerView.Adapter<ConfessionItemAdapter.ViewHolder>() {
 
     companion object {
-        private const val EXTRA_TID = "tid"
+        private const val EXTRA_DATA = "confession"
     }
 
     // bind view holder
@@ -67,7 +67,7 @@ class ConfessionItemAdapter (private val activity: Activity, private val dataLis
 
         holder.cardView.setOnClickListener {
             activity.startActivity(Intent(activity, ConfessionDetailActivity::class.java)
-                    .putExtra(EXTRA_TID, item.confessionId))
+                    .putExtra(EXTRA_DATA, item))
         }
 
         holder.targetName.text = item.title
@@ -76,6 +76,7 @@ class ConfessionItemAdapter (private val activity: Activity, private val dataLis
         holder.likeCount.text = item.likeCount.toString()
         holder.releaseTime.text = DateCalculate.getExpressionDate(item.time)
         holder.likeIcon.setImageResource(R.drawable.ic_like_normal)
+
     }
 
     // create view

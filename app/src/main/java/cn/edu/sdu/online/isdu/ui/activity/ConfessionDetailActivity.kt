@@ -72,9 +72,6 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
 
     private var commentRecyclerView: RecyclerView? = null
     private var commentAdapter: MyAdapter? = null
-////    private var postCommentList = ArrayList<PostComment>()
-//    private var userIdMap: HashMap<String, String> = HashMap()
-//    private var userNicknameMap: HashMap<String, String> = HashMap()
 
     private var isLike = false // 是否点赞
     private var showCollectToast = false  // 是否显示已经收藏
@@ -95,9 +92,6 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
 
         confessionId = intent.getIntExtra("id", 0)
         url = ServerInfo.getConfession(confessionId)
-//        uid = intent.getStringExtra("uid") ?: ""
-//        title = intent.getStringExtra("title") ?: ""
-//        time = intent.getLongExtra("time", 0L)
         tag = intent.getStringExtra("tag") ?: ""
 
         if (User.staticUser == null) User.staticUser = User.load()
@@ -114,6 +108,10 @@ class ConfessionDetailActivity : SlideActivity(), View.OnClickListener {
         commentAdapter = MyAdapter()
         commentAdapter!!.setHasStableIds(true)
         commentRecyclerView!!.adapter = commentAdapter
+    }
+
+    private fun loadData() {
+
     }
 
     private fun initView() {

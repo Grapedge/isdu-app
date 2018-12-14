@@ -1,4 +1,4 @@
-package cn.edu.sdu.online.isdu.ui.fragments.main;
+package cn.edu.sdu.online.isdu.ui.fragments.main
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager

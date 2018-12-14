@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="新建"
+            android:text="@string/confession"
             android:gravity="center"
             android:textColor="@color/colorPrimaryText"
             android:textSize="18sp"/>
@@ -38,7 +38,7 @@
             android:id="@+id/btn_done"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:text="表白"
+            android:text="@string/publish"
             android:gravity="center_vertical"
             android:textSize="18sp"
             android:textColor="@color/colorPurpleDark"
@@ -52,74 +52,17 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="是否匿名:"
-                    android:textSize="18sp" />
-                <TextView
-
-                    android:id="@+id/text_college"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="18dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/colorWhite"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="18sp" />
-
-                <ImageView
-
-                    android:id="@+id/btn_college_cho"
-
-                    android:layout_width="40dp"
-
-                    android:layout_height="40dp"
-
-                    android:layout_weight="1"
-
-                    android:paddingTop="10dp"
-
-                    android:paddingBottom="10dp"
-
-                    android:src="@drawable/ic_forward"
-
-                    android:clickable="true"
-
-                    android:focusable="true"
-
-                    android:onClick="college"
-
-                    android:layout_gravity="center_vertical"/>
-
-
-
-            </LinearLayout>
 
             <EditText
                 android:id="@+id/edit_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="标题"
+                android:hint="@string/title_hint"
                 android:textColor="@color/colorPrimaryText"
                 android:background="@color/colorWhite"
                 android:layout_marginStart="16dp"
@@ -132,8 +75,8 @@
                 android:id="@+id/separate_line1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginTop="8dp"
                 android:background="@color/colorSeparateLine"/>
 
@@ -150,6 +93,30 @@
         </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/edit_operation_bar" />
+    <!-- 工具栏 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/edit_operation_bar"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/anonymous"
+                android:textColor="@color/colorSecondaryText" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:buttonTint="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -40,7 +40,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="帖子"
+            android:text="@string/post_title"
             android:gravity="center"
             android:textColor="@color/colorPrimaryText"
             android:textSize="18sp"/>
@@ -75,44 +75,7 @@
             android:orientation="vertical"
             android:paddingBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal">
-
-                <!--内容标志-->
-                <TextView
-                    android:id="@+id/title_flag"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:textColor="@color/colorWhite"
-                    android:visibility="gone"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/red_rect"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="4dp"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp" />
-
-                <TextView
-                    android:id="@+id/txt_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimaryText"
-                    android:background="@color/colorWhite"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:textSize="20sp"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <!--发帖者信息-->
+            <!--发帖信息-->
             <LinearLayout
                 android:id="@+id/poster_layout"
                 android:layout_width="wrap_content"
@@ -127,17 +90,20 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/circle_image_view"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_book"/>
 
                 <TextView
                     android:id="@+id/txt_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@color/colorPrimaryText" />
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="18dp"
+                    android:text="hello, world"/>
 
             </LinearLayout>
 
@@ -147,7 +113,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:text="刚刚"
+                android:textColor="@color/colorPrimaryDark"/>
 
             <View
                 android:id="@+id/separate_line1"
@@ -165,7 +133,7 @@
                 android:layout_weight="1"
                 android:layout_marginTop="8dp"
                 app:rt_editor_image_bottom="10"
-                app:rt_editor_text_size="16"/>
+                app:rt_editor_text_size="16" />
 
             <!--评论区-->
             <TextView
@@ -176,7 +144,7 @@
                 android:paddingTop="4dp"
                 android:paddingBottom="4dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorSeparateLine"/>
+                android:background="@color/colorSeparateLine" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
